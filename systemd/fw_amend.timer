@@ -1,0 +1,9 @@
+[Unit]
+Description=Hourly Firewall check and updates
+
+[Timer]
+OnCalendar = *-*-* *:12,32,52
+StandardOutput=append:/opt/firewall-amend/log/fw.log
+
+[Install]
+WantedBy=timers.target
