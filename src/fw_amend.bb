@@ -69,6 +69,7 @@
       (t/info "fw-amend: no change")
       (do
         (ufw-update ufw-ip cur-ip)
-        (f2b-update ufw-ip cur-ip)))))
+        (f2b-update ufw-ip cur-ip)
+        (t/info "fw-amend: changed")))))
 
 (fw-amend "hkim.ddns.net")
