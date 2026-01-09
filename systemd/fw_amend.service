@@ -6,5 +6,5 @@ Type=oneshot
 User=ubuntu
 WorkingDirectory=/opt/firewall-amend/
 EnvironmentFile=/opt/firewall-amend/.env
-ExecStart=/opt/firewall-amend/fw_amend.bb
+ExecStart=/opt/firewall-amend/src/fw_amend.bb
 StandardOutput=append:/opt/firewall-amend/log/fw_amend.log

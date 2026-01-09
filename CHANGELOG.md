@@ -5,7 +5,7 @@
 - systemd-timer mechanism
 - test folder (currently empty)
 - log folder
-* stage (use eq.local)
+- staging (use m4:ubuntu)
 
 ## 0.1.0 (2026-01-07)
 
