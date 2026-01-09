@@ -11,7 +11,8 @@ nrepl:
 systemd:
 	sudo cp systemd/fw_amend.* /lib/systemd/system
 	sudo systemctl daemon-reload
-	sudo systemctl fw_amend.timer restart
+	sudo systemctl restart fw_amend.timer
+	sudo systemctl enable fw_amend.timer
 
 # socket repl at 1666
 # does not work well with sublime

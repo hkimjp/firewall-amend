@@ -1,5 +1,5 @@
 #!/usr/bin/env bb
-;(ns fw-amend)
+
 (require '[babashka.process :as ps])
 (require '[taoensso.timbre :as t])
 
@@ -8,6 +8,10 @@
 
 (t/info "never-delette:" never-delete)
 (t/info "target:" target)
+(when (or (nil? never-delete) (nil? target))
+  (let [msg "mandatory `never-delete` and `target`"]
+    (t/error msg)
+    (throw (Exception. msg))))
 
 (defn shell [args]
   (-> (ps/shell {:out :string} args)
