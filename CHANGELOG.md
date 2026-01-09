@@ -1,5 +1,9 @@
 # firewall-amend
 
+## Unreleased
+
+- app.melt, no log recorded
+
 ## 0.2.2-SNAPSHOT
 
 - started on app.melt
