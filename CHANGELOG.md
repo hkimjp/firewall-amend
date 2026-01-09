@@ -1,5 +1,9 @@
 # firewall-amend
 
+## 0.2.2-SNAPSHOT
+
+- started on app.melt
+
 ## 0.2.1 (2026-01-09)
 
 - systemd-timer mechanism
