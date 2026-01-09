@@ -1,6 +1,6 @@
 # firewall-amend
 
-## 0.2.1-SNAPSHOT
+## 0.2.1 (2026-01-09)
 
 - systemd-timer mechanism
 - test folder (currently empty)
