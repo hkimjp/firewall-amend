@@ -1,0 +1,8 @@
+[Unit]
+Description=Firewall check and updates periodically
+
+[Timer]
+OnCalendar = *-*-* *:12,32,52
+
+[Install]
+WantedBy=timers.target

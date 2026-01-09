@@ -1,0 +1,9 @@
+[Unit]
+Description=Firewall maintenance
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/firewall-amend/
+EnvironmentFile=/opt/firewall-amend/.env
+ExecStart=/opt/firewall-amend/src/fw_amend.bb
+StandardOutput=append:/opt/firewall-amend/log/fw_amend.log

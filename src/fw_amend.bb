@@ -1,10 +1,13 @@
-;#!/usr/bin/env bb
+#!/usr/bin/env bb
 ;(ns fw-amend)
 (require '[babashka.process :as ps])
 (require '[taoensso.timbre :as t])
 
 (def never-delete (System/getenv "NEVER_DELETE"))
-; never-delete
+(def target (System/getenv "TARGET"))
+
+(t/info "never-delette:" never-delete)
+(t/info "target:" target)
 
 (defn shell [args]
   (-> (ps/shell {:out :string} args)
@@ -60,8 +63,6 @@
   (-> (shell (str "dig +short " url))
       str/trim))
 
-; (dig "hkim.ddns.net")
-
 (defn fw-amend [host]
   (let [cur-ip (dig host)
         ufw-ip (ufw-cur)]
@@ -69,6 +70,7 @@
       (t/info "fw-amend: no change")
       (do
         (ufw-update ufw-ip cur-ip)
-        (f2b-update ufw-ip cur-ip)))))
+        (f2b-update ufw-ip cur-ip)
+        (t/info "fw-amend: changed")))))
 
-(fw-amend "hkim.ddns.net")
+(fw-amend target)
