@@ -3,7 +3,6 @@ Description=Firewall maintenance
 
 [Service]
 Type=oneshot
-User=ubuntu
 WorkingDirectory=/opt/firewall-amend/
 EnvironmentFile=/opt/firewall-amend/.env
 ExecStart=/opt/firewall-amend/src/fw_amend.bb

@@ -6,8 +6,8 @@
 (def never-delete (System/getenv "NEVER_DELETE"))
 (def target (System/getenv "TARGET"))
 
-(t/log "never-delette:" never-delete)
-(t/log "target:" target)
+(t/info "never-delette:" never-delete)
+(t/info "target:" target)
 
 (defn shell [args]
   (-> (ps/shell {:out :string} args)
