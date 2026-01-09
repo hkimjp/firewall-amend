@@ -1,7 +1,11 @@
 # firewall-amend
 
+## Unreleased
+
+
 ## 0.2.2-SNAPSHOT
 
+- chmod +x src/fw_ammend.bb
 - started on app.melt
 
 ## 0.2.1 (2026-01-09)
