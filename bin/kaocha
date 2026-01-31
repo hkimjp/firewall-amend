@@ -1,0 +1,4 @@
+
+#!/usr/bin/env bash
+bb -m kaocha.runner/-main  $@
+
