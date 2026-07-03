@@ -2,12 +2,12 @@
 
 ## Unreleased
 
-## 0.2.3
+## 0.2.3 (2026-07-03)
 
 - wrap fw-amend by try ~ exception
 - recipe `oneshot` in Justfile
 
-## 0.2.2-SNAPSHOT
+## 0.2.3
 
 - chmod +x src/fw_ammend.bb
 - started on app.melt
