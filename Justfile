@@ -22,3 +22,5 @@ systemd:
 install:
   tar cf - . | (cd /opt/firewall-amend && sudo tar xf -)
 
+oneshot:
+  bb src/fw_amend.

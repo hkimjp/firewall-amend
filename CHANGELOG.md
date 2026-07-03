@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.2.3
+
+- wrap fw-amend by try ~ exception
+- recipe `oneshot` in Justfile
 
 ## 0.2.2-SNAPSHOT
 
