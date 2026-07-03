@@ -68,13 +68,15 @@
       str/trim))
 
 (defn fw-amend [host]
-  (let [cur-ip (dig host)
-        ufw-ip (ufw-cur)]
-    (if (= cur-ip ufw-ip)
-      (t/info "fw-amend: no change")
-      (do
-        (ufw-update ufw-ip cur-ip)
-        (f2b-update ufw-ip cur-ip)
-        (t/info "fw-amend: changed")))))
+  (try
+    (let [cur-ip (dig host)
+          ufw-ip (ufw-cur)]
+      (if (= cur-ip ufw-ip)
+        (t/info "fw-amend: no change")
+        (do
+          (ufw-update ufw-ip cur-ip)
+          (f2b-update ufw-ip cur-ip)
+          (t/info "fw-amend: changed"))))
+    (catch Exception e (t/error (.getMessage e)))))
 
 (fw-amend target)
